@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDUT INFORMASI</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+        function showWelcomeMessage() {
+            const message = document.createElement("div");
+            message.textContent = "SELAMAT DATANG DI SUDUT INFORMASI";
+            message.style.position = "fixed";
+            message.style.top = "50%";
+            message.style.left = "50%";
+            message.style.transform = "translate(-50%, -50%)";
+            message.style.backgroundColor = "#e74c3c";
+            message.style.color = "#fff";
+            message.style.padding = "20px";
+            message.style.borderRadius = "10px";
+            message.style.zIndex = "1000";
+
+            document.body.appendChild(message);
+
+            setTimeout(() => {
+                message.remove();
+            }, 3000);
+        }
+
+        window.onload = function() {
+            const learnMoreButton = document.querySelector('a.button'); // Select the button with class "button"
+            learnMoreButton.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default anchor behavior
+                showWelcomeMessage(); // Show the welcome message
+            });
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="" class="button">Home</a></li>
+                <li><a href="login.html" class="button">Login</a></li>
+                <li><a href="register.html" class="button">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="info left-align">
+            <h1>SUDUT</h1>
+            <h2>INFORMASI</h2>
+            <p>Sudut informasi adalah sudut pandang atau cara seseorang dalam melihat dan memahami suatu informasi berdasarkan latar belakang, pengetahuan, atau konteks tertentu.</p>
+            <a href="" class="button">Learn More</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sudut Informasi. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
